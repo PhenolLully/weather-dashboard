@@ -100,3 +100,5 @@ You are required to submit BOTH of the following for review:
 
 - - -
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + "c1bc0050e8b1441f96eb602f81355ba2";
+

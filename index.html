@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Weather Dashboard</title>
 </head>
 <body>
@@ -14,9 +14,6 @@
 
   
   <div class="search-container">
-    <label for="cityInput">Enter City:</label>
-    <input type="text" id="cityInput" placeholder="Enter city name">
-    
     <label for="latitudeInput">Latitude:</label>
     <input type="text" id="latitudeInput" placeholder="Enter latitude">
 
@@ -28,12 +25,14 @@
 
     <section class="weather-container" id="weatherContainer">
       <!-- Weather information will be displayed here -->
-      <h1 class="name"></h1>
-      <p class="desc"></p>
-      <p class="temp"></p>
+      <h1 class="name">City Name</h1>
+      <p class="desc">Description</p>
+      <p class="temp">Temperature</p>
+      <p class="wind">Wind</p>
+      <p class="humid">Humidity</p>
     </section>
 
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
