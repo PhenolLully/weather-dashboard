@@ -52,3 +52,17 @@ button:hover {
   padding: 50px;
   text-align: center;
 }
+
+.bottom-boxes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.box {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 75px;
+  text-align: center;
+  width: 100px;
+}
