@@ -10,26 +10,43 @@ function searchWeather() {
     }
 
   
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + "c1bc0050e8b1441f96eb602f81355ba2";
-
+    var currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + "c1bc0050e8b1441f96eb602f81355ba2";
+    var forecastURL =  "https://api.openweathermap.org/data/2.5/forecast?lat=" + latitude + "&lon=" + longitude + "&appid=" + "c1bc0050e8b1441f96eb602f81355ba2";
  
 
-fetch(queryURL)
+fetch(currentWeatherURL)
     .then(response => response.json())
     .then(data => {
-       
+       console.log(data);
         var name = document.querySelector(".name");
+        var date = document.querySelector(".date")
         var desc = document.querySelector(".desc");
         var temp = document.querySelector(".temp");
         var humid = document.querySelector(".humid");
         var wind = document.querySelector(".wind"); 
 
+        var translatedDate = new Date (data.dt);
+
         name.textContent = data.name;
+        date.textContent = "Date: " + translatedDate;
         desc.textContent = data.weather[0].description;
         temp.textContent = "Temperature: " + data.main.temp + " K";
-        humid.textContent = "Humidity: " + data.main.humid + "%";
+        humid.textContent = "Humidity: " + data.main.humidity + "%";
         wind.textContent = "Wind Speed: " + data.wind.speed + " m/s"; 
 
+fetch(forecastURL)
+    .then(response => response.json())
+    .then(forecastData => {
+        for(i=0; i<forecastData.list.length; i+=8 ){
+            forecastData.list[i]
+        }
+
+        console.log(forecastData);  
+                })
+    .catch(err => {
+        alert("Error fetching 5-day forecast data.");
+        console.error(err);
+    });
     })
     .catch(err => {
         alert("Error fetching weather data.");
