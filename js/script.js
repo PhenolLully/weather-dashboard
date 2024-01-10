@@ -22,8 +22,8 @@ fetch(currentWeatherURL)
         var date = document.querySelector(".date")
         var desc = document.querySelector(".desc");
         var temp = document.querySelector(".temp");
-        var humid = document.querySelector(".humid");
-        var wind = document.querySelector(".wind"); 
+        var wind = document.querySelector(".wind");
+        var humid = document.querySelector(".humid"); 
 
         var translatedDate = new Date (data.dt);
 
@@ -31,14 +31,21 @@ fetch(currentWeatherURL)
         date.textContent = "Date: " + translatedDate;
         desc.textContent = data.weather[0].description;
         temp.textContent = "Temperature: " + data.main.temp + " K";
-        humid.textContent = "Humidity: " + data.main.humidity + "%";
         wind.textContent = "Wind Speed: " + data.wind.speed + " m/s"; 
+        humid.textContent = "Humidity: " + data.main.humidity + "%";
 
 fetch(forecastURL)
     .then(response => response.json())
     .then(forecastData => {
         for(i=0; i<forecastData.list.length; i+=8 ){
             forecastData.list[i]
+            var divTemp = document.querySelector(".divTemp");
+            var divWind = document.querySelector(".divWind");
+            var divHumid = document.querySelector(".divHumid");
+
+            divTemp.textContent = "Temperature: " + data.main.temp + " K";
+            divWind.textContent = "Wind Speed: " + data.wind.speed + " m/s";
+            divHumid.textContent = "Humidity: " + data.main.humidity + "%";
         }
 
         console.log(forecastData);  
