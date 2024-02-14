@@ -37,15 +37,17 @@ fetch(currentWeatherURL)
 fetch(forecastURL)
     .then(response => response.json())
     .then(forecastData => {
+        var dayCounter = 1;
         for(i=0; i<forecastData.list.length; i+=8 ){
-            forecastData.list[i]
-            var divTemp = document.querySelector(".divTemp");
-            var divWind = document.querySelector(".divWind");
-            var divHumid = document.querySelector(".divHumid");
+            var forecast = forecastData.list[i];
+            var divTemp = document.querySelector(`#divTemp${dayCounter}`);
+            var divWind = document.querySelector(`#divWind${dayCounter}`);
+            var divHumid = document.querySelector(`#divHumid${dayCounter}`);
 
-            divTemp.textContent = "Temperature: " + data.main.temp + " K";
-            divWind.textContent = "Wind Speed: " + data.wind.speed + " m/s";
-            divHumid.textContent = "Humidity: " + data.main.humidity + "%";
+            divTemp.textContent = "Temperature: " + forecast.main.temp + " K";
+            divWind.textContent = "Wind Speed: " + forecast.wind.speed + " m/s";
+            divHumid.textContent = "Humidity: " + forecast.main.humidity + "%";
+            dayCounter++;
         }
 
         console.log(forecastData);  
