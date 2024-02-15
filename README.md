@@ -1,14 +1,38 @@
 # 06 Server-Side APIs: Weather Dashboard
 
-## Your Task
+## Description
 
-Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
-Use the [5 Day Weather Forecast](https://openweathermap.org/forecast5) to retrieve weather data for cities. The base URL should look like the following: `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}`. After registering for a new API key, you may need to wait up to 2 hours for that API key to activate.
+- What was your motivation?
+  My motivation was to prove to myself that I can create at least a functional weather dashboard using a third party API
+- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
+I built this project to improve on my skills as a developer and understanding how to build a third party API
+- What problem does it solve?
+The problem it solves is implementing a third party API and making it functional
+- What did you learn?
+I learned that fecthing a third party API isn't as hard as it seems as long as you can read and interpret documentation and utilize the 
+resources around you, you should be fine
 
-**Hint**: Using the 5 Day Weather Forecast API, you'll notice that you will need to pass in coordinates instead of just a city name. Using the OpenWeatherMap APIs, how could we retrieve geographical coordinates given a city name?
+## Installation
 
-You will use `localStorage` to store any persistent data. For more information on how to work with the OpenWeather API, refer to the [Full-Stack Blog on how to use API keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys).
+What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+
+First a github repository needs to be created make sure it has a README.md file, then clone the repository and paste it in your Week 6 folder. Then open the developer folder in the class repository and copy the material inside the folder into the repository folder. Then you can continue work on the assignment.
+
+## Usage
+
+Provide instructions and examples for use. Include screenshots as needed.
+
+To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+
+    
+  ![WeatherScreenshot](./assets/images/weather.jpg)
+    
+
+## Credits
+CHARLES PUENTE-MATOS ONE OF THE TUTORING TEACHERS ASSISTED ME ON PART OF THIS ASSIGNMENT!
+I DID USE YOUTUBE AND OTHER SITES TO HELP ME IMPLEMENT AND COME TO AN UNDERSTANDING OF CODE THAT I AM USING!!!
 
 ## User Story
 
